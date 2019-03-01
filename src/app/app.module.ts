@@ -8,12 +8,16 @@ import { DetailComponent } from './detail/detail.component';
 import {FormsModule} from '@angular/forms';
 import {MovieService} from './movie.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SelectedComponent } from './selected/selected.component';
+import { SelectedotherComponent } from './selectedother/selectedother.component';
 @NgModule({
   declarations: [
     AppComponent,
     MasterComponent,
     DetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    SelectedComponent,
+    SelectedotherComponent
   ],
   imports: [
     FormsModule,
