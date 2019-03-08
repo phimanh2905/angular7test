@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ang7test": {
+    "calendarschedule": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ang7test",
+            "outputPath": "dist/calendarschedule",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,7 +27,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ang7test:build"
+            "browserTarget": "calendarschedule:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ang7test:build:production"
+              "browserTarget": "calendarschedule:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ang7test:build"
+            "browserTarget": "calendarschedule:build"
           }
         },
         "test": {
@@ -107,7 +108,7 @@
         }
       }
     },
-    "ang7test-e2e": {
+    "calendarschedule-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ang7test:serve"
+            "devServerTarget": "calendarschedule:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ang7test:serve:production"
+              "devServerTarget": "calendarschedule:serve:production"
             }
           }
         },
@@ -136,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "ang7test"
+  "defaultProject": "calendarschedule"
 }
