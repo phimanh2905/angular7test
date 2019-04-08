@@ -1,20 +1,25 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { MovieService } from "../movie.service";
+import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-selected",
   templateUrl: "./selected.component.html",
   styleUrls: ["./selected.component.scss"]
 })
 export class SelectedComponent implements OnInit {
-  text = 'manh';
-  constructor(private movieService: MovieService) {}
+  constructor() {}
 
-  ngOnInit() {
-    // this.movieService.setTextFromSelected(this.text);
-  }
+  condition: boolean;
 
-  OnButtonClicked(){
-    
-    this.movieService.setTextFromSelected(this.text);
+  ngOnInit() {}
+
+  btnName = "like";
+
+  bindingValid() {
+    if (this.btnName === "unlike") {
+      this.btnName = "like";
+      this.condition = true;
+    } else {
+      this.btnName = "unlike";
+      this.condition = null;
+    }
   }
 }

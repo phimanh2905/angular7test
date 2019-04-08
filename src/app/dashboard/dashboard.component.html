@@ -1,13 +1,7 @@
 <h3>top movie</h3>
 <div>
-  <a
-    *ngFor="let movie of movies"
-    class="col-1-4"
-    style="text-decoration:none;"
-    
-  >
-    <!-- [routerLink]="['/detail/{{movie.id}}']" -->
-    <div class="movie-box">
+  <a *ngFor="let movie of movies" class="col-1-4" style="text-decoration:none;">
+    <div class="movie-box" routerLink="/detail/{{ movie.id }}">
       <h4>{{ movie.name }}</h4>
     </div>
   </a>

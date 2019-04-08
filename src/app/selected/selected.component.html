@@ -1,1 +1,10 @@
-<button (click)="OnButtonClicked()">click</button>
+<p ngDefaultControl>valid: {{ txtCondition.valid }}</p>
+
+<!-- <button (click)="setValue()">
+  {{ btnName }}
+</button> -->
+
+<input type="text" [(ngModel)]="condition" #txtCondition="ngModel" required [ngStyle]="{'display': 'none'}" />
+
+<img src="assets/img/like-icons-png-7.png" *ngIf="condition" (click)="bindingValid()"/>
+<img src="assets/img/download.png" *ngIf="!condition" (click)="bindingValid()"/>

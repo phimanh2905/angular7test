@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../movie.service';
-import { Movie } from '../../model/movie';
+import { Component, OnInit } from "@angular/core";
+import { MovieService } from "../movie.service";
+import { Movie } from "../../model/movie";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
   constructor(private movieService: MovieService) {}
